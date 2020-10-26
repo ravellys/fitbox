@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8"/>
+	<title>Paciente Beta</title>
+	<style>
+
+		body{
+
+			font: normal 12pt Arial;
+			color:rgb(0,0,0);
+		}
+
+		div#interface{
+			display: block;
+			width: 1000px;
+			height: 800px;
+			margin: auto;
+			padding: 15px;
+			background-color: #ededed;
+			box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+		}
+
+		header{
+			background-color: #32CD32;
+			color: white;
+			padding: 10px;
+			margin: 10px;
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+		}
+
+
+
+		ul#informacao li{
+			display: inline;
+		}
+
+		ul#informacao li::before {
+			content: "•"; /* Insert content that looks like bullets */
+			padding-right: 8px;
+		}
+
+		div#ferramentas{
+			margin: 10px;
+		}
+
+		ul#lista-ferramentas{
+			list-style: none;
+			display: block;
+			margin: auto;
+
+		}
+
+		ul#lista-ferramentas li{
+			display:inline-block;
+			width: 200px;
+			height: auto;
+			text-align: center;
+			margin-top: 10px;
+			padding: 10px;
+
+		}
+
+		ul#lista-ferramentas li p{
+			font-size: 10pt;
+		}
+
+		ul#lista-ferramentas li a{
+			display: block;
+			text-decoration: none;
+			color: black;
+		}
+
+
+
+		img#antropometria{
+			width: 20%;
+		}
+
+		img#gastos-energeticos{
+			width: 15%;
+		}
+
+		img#lab-exames{
+			width: 10%;
+		}
+
+		img#alimentos{
+			width: 10%;
+		}
+
+		ul#lista-ferramentas li:hover{
+			background-color: #32CD32;
+			box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+		}
+
+		input:hover{
+			background-color: #32CD32;
+		}
+		
+
+
+
+	</style>
+</head>
+
+<body>
+	<div id="interface">
+		<header id="paciente-resumo">
+			<h1 id="nome">Abraão Alves Vila Nova </h1>
+			<ul id="informacao">
+				<li>26 anos</li>
+				<li>78 kg</li>
+				<li>174 cm</li>
+				<li>IMC: 26,06 </li>
+				<li>Massa Gordura: 18 %</li>
+			</ul>
+
+
+		</header>
+
+		<div id="ferramentas">
+		<h2>Vamos começar?</h2>
+		<p>Escolha uma opção para adicionar uma avaliação</p>
+			<ul id="lista-ferramentas">
+				<li><a href="avaliacao-antropometrica.html"><img src="_imagens/antropometria.png" id="antropometria"/>
+					<p>Avaliação Antropométrica</p></a></li>
+				<li><a href=""><img src="_imagens/gastos-energeticos.svg" id="gastos-energeticos"/><p>Gastos Energéticos?</p></a></li>
+				<li><a href=""><img src="_imagens/lab-exames.png" id="lab-exames"/><p>Exames laboratoriais</p></a></li>
+				<li><a href=""><img src="_imagens/alimentos.png" id="alimentos"/><p>Recordário Alimentar</p></a></li>
+		</div>
+		<input type="button" onclick="location.href='index.html';" value="Voltar">
+	</div>
+</body>
+</html>

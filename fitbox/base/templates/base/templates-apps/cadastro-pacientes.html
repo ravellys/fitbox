@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Meus Parcientes</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="_CSS/estilos.css">
+	<link rel="stylesheet" type="text/css" href="_CSS/form.css">
+
+</head>
+
+<body>
+	<div id="interface">
+		<form method = "post" id="fContato">
+			<fieldset>
+				<legend>Cadastro de Paciente</legend>
+			<p><label for="cNome">Nome completo</label>
+			<input type="text" name="tNome" id="cNome" size="75" maxlength ="30"/></p>
+			<p>Data de nascimento <input type="date" name="tNasc" id="cNasc"/></p>
+			<p>Sexo</p>
+			 <p><input type="radio" name="tSexo" id="cMas" checked> <label for="cMas">Masculino<br></label>
+            <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label></p>
+			<p><label for="cMail">E-mail:</label> <input type="email" name="tMail" id="cMail" size="75" maxlength="40"/> </p>
+			<p><label for="cNum">Número:</label><input type="text" name="tNum" id="cNum" min="0" max="99999"/></p>
+			 <p><label for="cMsg">Observação:</label></p>
+            <p><textarea name="tMsg" id="cMsg" cols="45" rows="5"></textarea></p>
+
+            <input id="btm-salvar" type="button" value="Salvar" onclick="msg()">
+           <input type="button" onclick="location.href='index.html';" value="Cancelar">
+		</fieldset>
+		</form>
+	</div>
+
+	
+</body>
+</html>

@@ -2,11 +2,21 @@
 {% load static %}
 {% block title %}FitBox{% endblock title %}
 
-
 {% block body %}
-
-    <main class="p-4 m-4" >
-        <h1 class="p-4 m-4 text-white display-3 text-center">FitBox</h1>
-    </main>
-
+	<div id="interface">
+			<img id="img-logo" src="{% static 'images/logo-index.png' %}" alt="FitBox"/>
+			<div id="meus-pacientes">
+				<a href="templates-apps/paciente-cadastrado.html">
+					<p><img class="img-paciente" src="{% static 'images/pacientes.png' %}"/><p>
+					<p>Meus Pacientes</p>
+				</a>
+			</div>
+			<div id="novo-paciente">
+				<a href="base/cadastro-pacientes.html">
+					<p><img class="img-paciente" src="{% static 'images/novo-paciente.png' %}"/></p>
+					<p>Adicionar Paciente</P>
+				</a>
+			</div>
+    </div>
 {% endblock %}
+

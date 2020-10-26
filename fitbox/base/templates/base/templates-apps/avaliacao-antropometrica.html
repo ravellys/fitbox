@@ -1,0 +1,97 @@
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Avaliação Antropometríca</title>
+        <link rel="stylesheet" type="text/css" href="_CSS/estilos.css">
+        <style>
+            .container{
+                display: flex;
+                width: 800px;
+                height: 200px;
+                margin:20px;
+
+            }
+
+            .leng-1{
+                display: inline-block;
+                width:200px;
+                margin: 20px;
+            }
+          
+            div#leng-4{
+                display: inline-block;
+                width: 400px;
+                height: 100px;
+                margin: 10px;
+          
+            }
+            div#leng-2{
+                display: inline-block;
+                width: 200px;
+                height: 100px;
+                margin: 10px;
+            
+            }
+            p#comentario{
+                color:gray;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div id="interface">
+            <h1>Avaliação antropometrica</h1> 
+            <p>Enviar por e-mail | Salvar em PDF | Imprimir | Visualizar </p>
+            <div class="container">
+                <div id="leng-4">
+                    <p>Descrição</p>
+                    <p><textarea name="tMsg" id="cMsg" cols="55" rows="5"></textarea></p>
+                    <p id="comentario">Motivo do paciente, observações gerais, objetivos...</p>
+                </div>
+                <div id="leng-2">
+                    <p>Data</p>
+                    <p><input type="date"></p>
+                 </div>
+            </div>
+            <div class="line-div">
+                <div class="leng-1">
+                    <p>altura</p>
+                    <p><input type="number" id="cAltura" onblur="imc()"></p>
+                </div>
+                <div class="leng-1">
+                    <p>peso</p>
+                    <p><input type="number" id="cPeso" onblur="imc()"></p>
+                    
+                </div>
+                <div class="leng-1">
+                    <p>peso ideal</p>
+                    <p>[estimar peso ideal]</p>
+                    <p><input type="number"></p>
+                </div>
+                
+
+            </div>
+            
+            <h2>Circunferencia</h2>
+            <h3>Membros superiores</h3>
+
+            <h2>Diâmetros ósseos</h2>
+            <div id="res">Resultado</div>
+            Salvar
+        </div>
+
+        <script>
+          
+            
+            function imc(){
+                var peso = Number(document.getElementById('cPeso').value)
+                var altura = Number(document.getElementById('cAltura').value)
+                var res=window.document.getElementById('res')
+                res.innerHTML = ` seu IMC é igual a:${peso/(altura*altura)}`
+            }
+        </script>
+
+
+    </body>
+
+</html>

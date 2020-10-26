@@ -1,0 +1,72 @@
+		body{
+			font-family: sans-serif;
+			font-size: 12pt;
+		}
+
+		div#interface {
+			display: block;
+			width: 1000px;
+			height: 800px;
+			margin: auto;
+			padding: 15px;
+			background-color: #ededed;
+			box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+
+		}
+
+		img#img-logo{
+			display: block;
+			margin: auto;
+			width: 100px;
+		}
+
+		h1 {
+			text-align: center;
+			font-family: sans-serif;
+			font-size: 16pt;
+		}
+
+		div#meus-pacientes {
+			display: inline-block;
+			width: 450px;
+			margin:10px;
+			overflow: auto;
+			float:left;
+		}
+
+		div#novo-paciente {
+			display: inline-block;
+			width: 450px;
+			margin:10px;
+			overflow: auto;
+			float:right;
+		}
+
+		a {
+		  padding: 8px;
+		  text-decoration: none;
+		  text-align: center;
+		  color: black;
+		  display: block;
+		  margin: auto;
+		}
+
+		a:hover {
+			background-color: #90EE90;
+		}
+
+		img.img-paciente {
+			padding: 15px;
+			height: 10%;
+  			width: 10%;
+
+		}
+
+footer#rodape {
+	clear: both;
+	display: block;
+}
+
+footer#rodape p {
+	text-align: center;
+}

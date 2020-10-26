@@ -1,0 +1,24 @@
+form {
+	width: 500px;
+	margin: auto;
+}
+
+input:hover, textarea:hover {
+	background-color: #90EE90;
+}
+
+input#btm-salvar{
+	background-color: #90EE90;
+	font-weight: bold;
+}
+
+input#btm-salvar:hover{
+	background-color: #013220;
+}
+
+legend {
+	color: #888888;
+	font-weight: bold;
+	font-size: 13pt;
+	font-family: sans-serif;
+}
