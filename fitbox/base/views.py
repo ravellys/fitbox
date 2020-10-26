@@ -1,7 +1,6 @@
-from django.http import HttpResponse
-# from django.shortcuts import render
+from django.shortcuts import render
 # Create your views here.
 
 
 def home(request):
-    return HttpResponse('<h1>Olá FitBox</h1>')
+    return render(request, 'base/home.html')
