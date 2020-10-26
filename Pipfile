@@ -9,8 +9,6 @@ pytest-django = "*"
 pytest-cov = "*"
 codecov = "*"
 
-git push heroku 1:master -f
-
 [packages]
 django = "*"
 gunicorn = "*"

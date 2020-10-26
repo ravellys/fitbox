@@ -2,9 +2,8 @@
 📜 Plataforma web para cadastro e armazenamento de dados nutricionais de pacientes.
 
 
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+[![Build Status](https://travis-ci.com/ravellys/fitbox.svg?branch=main)](https://travis-ci.com/ravellys/fitbox)
+
 
 💡 De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
 
