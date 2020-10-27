@@ -1,6 +1,5 @@
 from django.shortcuts import render, redirect
 from fitbox.cadastro_paciente.forms import CadastroPacienteForm
-from fitbox.cadastro_paciente.models import CadastroPaciente
 
 
 def cadastro_paciente(request):
