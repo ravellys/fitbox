@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect
+from django.views.generic import ListView
+
+from fitbox.cadastro_paciente import facade
 from fitbox.cadastro_paciente.forms import CadastroPacienteForm
 from fitbox.cadastro_paciente.models import CadastroPaciente
 
@@ -21,3 +24,8 @@ def indice(request):
     pacientes = CadastroPaciente.objects.order_by('nome')
     return render(request, 'cadastro_paciente/paciente.html',
                   context={"pacientes": pacientes})
+
+
+def detalhe_paciente(request, id):
+    paciente = facade.encontrar_paciente(id)
+    return render(request, 'cadastro_paciente/dados_paciente.html', {'paciente': paciente})

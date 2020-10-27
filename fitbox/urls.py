@@ -17,13 +17,10 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from fitbox.cadastro_paciente.views import indice
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('fitbox.base.urls')),
     path('cadastro_paciente/', include('fitbox.cadastro_paciente.urls')),
-    path('paciente/', indice, name='indice'),
 ]
 
 if settings.DEBUG:
