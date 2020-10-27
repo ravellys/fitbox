@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from fitbox.cadastro_paciente.forms import CadastroPacienteForm
+from fitbox.cadastro_paciente.models import CadastroPaciente
 
 
 def cadastro_paciente(request):
@@ -14,3 +15,9 @@ def cadastro_paciente(request):
             print("error")
 
     return render(request, 'cadastro_paciente/cadastro_paciente.html', context={"form": form})
+
+
+def indice(request):
+    pacientes = CadastroPaciente.objects.order_by('nome')
+    return render(request, 'cadastro_paciente/paciente.html',
+                  context={"pacientes": pacientes})

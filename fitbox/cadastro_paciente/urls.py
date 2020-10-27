@@ -1,6 +1,6 @@
 from django.urls import path
 
-from fitbox.cadastro_paciente.views import cadastro_paciente
+from fitbox.cadastro_paciente.views import cadastro_paciente, indice
 
 app_name = 'cadastro'
 urlpatterns = [

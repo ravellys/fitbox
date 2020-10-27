@@ -1,0 +1,29 @@
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}FitBox - Pacientes{% endblock title %}
+
+{% block body %}
+
+            <div id="interface">
+
+                <table>
+                    <thead><h1>Lista de Pacientes</h1></thead>
+                <tbody>
+                    {% for paciente in pacientes %}
+                    <tr>
+                        <a href="">{{ paciente.nome | default:'Faltando Título' }}</a>
+                    </tr>
+                    </tbody>
+                </table>
+                    {% empty %}
+                        Sem Pacientes
+                    {% endfor %}
+
+            </div>
+
+{% endblock %}
+
+
+
+
+
