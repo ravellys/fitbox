@@ -13,6 +13,5 @@ class CadastroPaciente(models.Model):
     email = models.EmailField(unique=True)
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES, null=True)
 
-
     def __str__(self):
         return self.nome
