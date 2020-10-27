@@ -1,15 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Meus Parcientes</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="_CSS/estilos.css">
-	<link rel="stylesheet" type="text/css" href="_CSS/form.css">
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}FitBox - Cadastro{% endblock title %}
 
-</head>
+{% block body %}
+    <div id="interface">
+        <form onsubmit="{% url 'cadastro:cadastro_paciente' %}" method="post">
+        {% csrf_token %}
 
-<body>
-	<div id="interface">
+         <table>
+         <tr>
+             <td>
+                 <tr>
+                     <td>Nome</td>
+                     <td>{{ form.nome }}</td>
+                 </tr>
+                 <tr>
+                     <td>email</td>
+                     <td>{{ form.email }}</td>
+                 </tr>
+                 <tr>
+                     <td>Nascimento</td>
+                     <td>{{ form.nascimento }}</td>
+                 </tr>
+             </td>
+             <td>
+                 <input type="submit" id="name" class="btn btn-dark" value="Enviar" />
+             </td>
+         </tr>
+
+        </table>
+      </form>
+    </div>
+
+    <!---	<div id="interface">
 		<form method = "post" id="fContato">
 			<fieldset>
 				<legend>Cadastro de Paciente</legend>
@@ -30,6 +53,11 @@
 		</form>
 	</div>
 
-	
 </body>
-</html>
+ -->
+{% endblock %}
+
+
+
+
+

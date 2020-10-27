@@ -17,11 +17,10 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from fitbox.base.views import home
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home, name='home'),
+    path('', include('fitbox.base.urls')),
+    path('cadastro_paciente/', include('fitbox.cadastro_paciente.urls')),
 ]
 
 if settings.DEBUG:

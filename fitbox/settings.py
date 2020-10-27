@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'collectfast',
     'django.contrib.staticfiles',
     'fitbox.base',
+    'fitbox.cadastro_paciente',
 ]
 
 MIDDLEWARE = [
