@@ -11,7 +11,7 @@
                 <tbody>
                     {% for paciente in pacientes %}
                     <tr>
-                        <a href="{% url 'cadastro:indice' %}{{paciente.id}}">{{ paciente.nome | default:'Faltando Título' }}</a>
+                        <a href="{{ paciente.get_absolute_url }}">{{ paciente.nome | default:'Faltando Título' }}</a>
                     </tr>
                     </tbody>
                 </table>
