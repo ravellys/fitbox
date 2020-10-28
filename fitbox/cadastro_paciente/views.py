@@ -21,7 +21,7 @@ def cadastro_paciente(request):
 
 
 def indice(request):
-    pacientes = CadastroPaciente.objects.order_by('nome')
+    pacientes = CadastroPaciente.objects.order_by('nome').all()
     return render(request, 'cadastro_paciente/paciente.html',
                   context={"pacientes": pacientes})
 
