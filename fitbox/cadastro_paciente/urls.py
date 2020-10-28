@@ -6,5 +6,5 @@ app_name = 'cadastro'
 urlpatterns = [
     path('', cadastro_paciente, name='cadastro_paciente'),
     path('pacientes/', indice, name='indice'),
-    path('pacientes/<slug:id>/', detalhe_paciente, name='dados_paciente'),
+    path('pacientes/<slug:slug>/', detalhe_paciente, name='dados_paciente'),
 ]

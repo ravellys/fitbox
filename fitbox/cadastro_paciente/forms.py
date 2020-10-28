@@ -6,4 +6,4 @@ from fitbox.cadastro_paciente.models import CadastroPaciente
 class CadastroPacienteForm(forms.ModelForm):
     class Meta:
         model = CadastroPaciente
-        fields = '__all__'
+        fields = ('nome', 'email', 'nascimento', 'sexo')

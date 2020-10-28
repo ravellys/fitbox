@@ -26,6 +26,6 @@ def indice(request):
                   context={"pacientes": pacientes})
 
 
-def detalhe_paciente(request, id):
-    paciente = facade.encontrar_paciente(id)
+def detalhe_paciente(request, slug):
+    paciente = facade.encontrar_paciente(slug)
     return render(request, 'cadastro_paciente/dados_paciente.html', {'paciente': paciente})
