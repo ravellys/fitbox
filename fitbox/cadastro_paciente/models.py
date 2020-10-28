@@ -15,7 +15,7 @@ class CadastroPaciente(models.Model):
     nascimento = models.DateField()
     email = models.EmailField(unique=True)
     sexo = models.CharField(max_length=1, choices=SEXO_CHOICES, null=True)
-    #slug = models.SlugField(max_length=32, null=True)
+    # slug = models.SlugField(max_length=32, null=True)
 
     def get_absolute_url(self):
         return reverse('cadastro:dados_paciente', args=(self.id, ))

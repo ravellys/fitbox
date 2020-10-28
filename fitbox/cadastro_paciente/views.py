@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from django.views.generic import ListView
+# from django.views.generic import ListView
 
 from fitbox.cadastro_paciente import facade
 from fitbox.cadastro_paciente.forms import CadastroPacienteForm
