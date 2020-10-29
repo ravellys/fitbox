@@ -11,12 +11,28 @@
 					<p>Meus Pacientes</p>
 				</a>
 			</div>
-			<div id="novo-paciente">
-				<a href="{% url 'cadastro:cadastro_paciente' %}">
-					<p><img class="img-paciente" src="{% static 'images/novo-paciente.png' %}"/></p>
-					<p>Adicionar Paciente</P>
-				</a>
+			<div id="novo-paciente" >
+				<p class="align-content-center"><img class="img-paciente" src="{% static 'images/novo-paciente.png' %}"/></p>
+
+                <div class="modal fade" tabindex="-1" role="dialog" id="modal">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content"></div>
+                  </div>
+                </div>
+                <button id="novo-cadastro" class="btn btn-primary align-items-center" type="button" name="button">Adicionar Paciente</button>
 			</div>
     </div>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+    $("#novo-cadastro").modalForm({
+        formURL: "{% url 'cadastro:cadastro_paciente_popup' %}"
+    });
+
+    });
+    </script>
+
+
 {% endblock %}
 

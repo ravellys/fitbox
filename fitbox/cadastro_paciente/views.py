@@ -1,5 +1,7 @@
+from bootstrap_modal_forms.generic import BSModalCreateView
 from django.shortcuts import render, redirect
 # from django.views.generic import ListView
+from django.urls import reverse_lazy
 
 from fitbox.cadastro_paciente import facade
 from fitbox.cadastro_paciente.forms import CadastroPacienteForm
@@ -18,6 +20,13 @@ def cadastro_paciente(request):
             print("error")
 
     return render(request, 'cadastro_paciente/cadastro_paciente.html', context={"form": form})
+
+
+class PacientCreateView(BSModalCreateView):
+    template_name = 'cadastro_paciente/cadastro_paciente_popup.html'
+    form_class = CadastroPacienteForm
+    success_message = 'Success: pacint was created.'
+    success_url = reverse_lazy('base:home')
 
 
 def indice(request):
