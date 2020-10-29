@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('fitbox.base.urls')),
     path('cadastro_paciente/', include('fitbox.cadastro_paciente.urls')),
+    path('consulta/', include('fitbox.consultas.urls')),
 ]
 
 if settings.DEBUG:

@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'fitbox.base',
     'fitbox.cadastro_paciente',
+    'fitbox.consultas',
     'bootstrap_modal_forms',
 ]
 
